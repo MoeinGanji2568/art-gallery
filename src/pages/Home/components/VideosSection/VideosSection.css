@@ -1,17 +1,16 @@
 .video-container {
   display: flex;
   background-color: rgb(255, 255, 255);
-  justify-content: space-around;
-  flex-flow: row nowrap;
-  margin: 5em 0;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 20px;
 }
 
 .video-container .video-card {
   display: flex;
   flex-flow: column nowrap;
-
-  width: 35vw;
-  height: 49.8vw;
+  width: 270px;
+  height: 460px;
   margin: 5px;
   position: relative;
   border-radius: 25px;
@@ -75,11 +74,7 @@
 
 @media (min-width: 768px) {
   .video-container {
-    justify-content: space-evenly;
-  }
-  .video-container .video-card {
-    height: 38vw;
-    width: 18vw;
+    justify-content: space-around;
   }
 
   .video-container .notch {
