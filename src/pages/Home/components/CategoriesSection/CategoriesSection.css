@@ -96,7 +96,6 @@
   .categories-container {
     grid-template-columns: repeat(2, 1fr);
     width: 95vw;
-    height: 600px;
     justify-content: space-between;
   }
 
@@ -133,7 +132,6 @@
   .categories-container {
     grid-template-columns: repeat(4, 1fr);
     width: 95vw;
-    height: 600px;
     justify-content: space-between;
   }
 
