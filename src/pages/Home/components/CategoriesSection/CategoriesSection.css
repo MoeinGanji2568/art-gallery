@@ -16,7 +16,6 @@
 .category-card img {
   width: 100%;
   opacity: 0.5;
-  z-index: 0;
 }
 
 .category-card {
@@ -28,7 +27,6 @@
 
 .img-cont {
   background-color: black;
-  z-index: -1;
 }
 
 .category-card h3 {
