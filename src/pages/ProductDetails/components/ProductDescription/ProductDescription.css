@@ -5,6 +5,7 @@
   flex-flow: column nowrap;
   justify-content: space-evenly;
   line-height: 25px;
+  margin-top: 20px;
 }
 
 .products-page-container .product-details-description h1 {
@@ -128,8 +129,7 @@
 
 @media (min-width: 768px) {
   .products-page-container .product-details-description {
-    width: 25vw;
-    height: 300px;
+    width: 32vw;
     justify-content: space-between;
     line-height: 26px;
     margin-top: -30px;
