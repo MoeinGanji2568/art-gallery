@@ -1,0 +1,18 @@
+.btn {
+  display: block;
+  margin: 5px auto;
+  padding: 1.125rem;
+  width: 30%;
+  border-radius: 3.125rem;
+  background: linear-gradient(to right, #78ffd6, #a8ff78);
+  border: none;
+  font-wight: bold;
+  font-size: 1.3rem;
+}
+
+/* Mobile (0px - 767px) */
+@media (max-width: 767px) {
+  .btn {
+    width: 90%;
+  }
+}
