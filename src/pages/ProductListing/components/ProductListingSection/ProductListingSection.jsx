@@ -14,6 +14,7 @@ import { AiTwotoneHeart } from "react-icons/ai";
 import { useUserData } from "../../../../contexts/UserDataProvider.js";
 
 import { BsFillStarFill } from "react-icons/bs";
+import { handleImageError } from "../../../../helpers/imageUtils.js";
 
 export const ProductListingSection = () => {
   const { state } = useData();
@@ -81,7 +82,7 @@ export const ProductListingSection = () => {
                       tiltMaxAngleY={15}
                       scale={1.08}
                     >
-                      <img src={img} alt="" />
+                      <img src={img} alt={name} onError={handleImageError} />
                     </Tilt>
                   </div>
                 </Link>
