@@ -10,8 +10,12 @@ import { useData } from "../../contexts/DataProvider.js";
 import { useAuth } from "../../contexts/AuthProvider.js";
 import { CgShoppingCart } from "react-icons/cg";
 import { useUserData } from "../../contexts/UserDataProvider.js";
+import Drawer from "../Ui/Drawer/Drawer.jsx";
+import NavLinks from "./NavLink.jsx";
 
 export const Header = () => {
+  const [isOpenDrawer, setIsOpenDrawer] = useState(false);
+
   const { auth } = useAuth();
   const { dispatch } = useData();
   const navigate = useNavigate();
@@ -63,13 +67,7 @@ export const Header = () => {
         </button>
       </div>
 
-      <div
-        className={
-          !showHamburger
-            ? "nav-link-container-mobile nav-link-container"
-            : "nav-link-container"
-        }
-      >
+      <div className={"nav-link-container"}>
         <NavLink
           onClick={() => setShowHamburger(true)}
           style={getActiveStyle}
@@ -113,18 +111,21 @@ export const Header = () => {
         </NavLink>
       </div>
       {showHamburger && (
-        <div className="hamburger-icon" onClick={() => setShowHamburger(false)}>
+        <div className="hamburger-icon" onClick={() => setIsOpenDrawer(true)}>
           <RxHamburgerMenu size={20} />
         </div>
       )}
       {!showHamburger && (
         <div
           className="cross-tab-icon cross-tab-icon-mobile"
-          onClick={() => setShowHamburger(true)}
+          onClick={() => setIsOpenDrawer(false)}
         >
           <RxCross2 color={"rgb(106, 106, 65)"} size={25} />
         </div>
       )}
+      <Drawer open={isOpenDrawer} onClose={() => setIsOpenDrawer(false)}>
+        <NavLinks />
+      </Drawer>
     </nav>
   );
 };
