@@ -15,9 +15,11 @@ import { useUserData } from "../../../../contexts/UserDataProvider.js";
 
 import { BsFillStarFill } from "react-icons/bs";
 import { handleImageError } from "../../../../helpers/imageUtils.js";
+import Skeleton from "react-loading-skeleton";
+import ProductSkeleton from "./ProductSkeleton.jsx";
 
 export const ProductListingSection = () => {
-  const { state } = useData();
+  const { state, loading } = useData();
   const {
     isProductInCart,
     isProductInWishlist,
@@ -25,7 +27,6 @@ export const ProductListingSection = () => {
     addToCartHandler,
     cartLoading,
   } = useUserData();
-
   const {
     allProductsFromApi,
     inputSearch,
@@ -63,7 +64,9 @@ export const ProductListingSection = () => {
             trending,
             img,
           } = product;
-
+          if (loading) {
+            return <ProductSkeleton />;
+          }
           return (
             <Tilt
               key={product._id}
