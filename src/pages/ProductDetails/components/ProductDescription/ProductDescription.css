@@ -132,7 +132,7 @@
     width: 32vw;
     justify-content: space-between;
     line-height: 26px;
-    margin-top: -30px;
+    margin-top: 0;
   }
 
   .tags {
