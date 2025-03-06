@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useData } from "../../../../contexts/DataProvider.js";
 import { Link } from "react-router-dom";
 import "./CategoriesSection.css";
-import Button from "../../../../components/Ui/Button.jsx";
+import Button from "../../../../components/Ui/Button/Button.jsx";
 
 export const CategoriesSection = () => {
   const [showAll, setShowAll] = useState(false);
