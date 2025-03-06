@@ -1,7 +1,7 @@
 import "./ProductImage.css";
 import Tilt from "react-parallax-tilt";
-
 import React from "react";
+import { handleImageError } from "../../../../helpers/imageUtils";
 
 export const ProductImage = ({ selectedProduct }) => {
   return (
@@ -11,8 +11,15 @@ export const ProductImage = ({ selectedProduct }) => {
       transitionSpeed={1000}
       className="product-details-image"
     >
-      {" "}
-      <img src={selectedProduct?.img} alt={selectedProduct.name} />
+      {selectedProduct ? (
+        <img
+          src={selectedProduct?.img}
+          alt={selectedProduct.name}
+          onError={handleImageError}
+        />
+      ) : (
+        <p>Loading ...</p>
+      )}
     </Tilt>
   );
 };

@@ -11,7 +11,10 @@ export const ProductListing = () => {
     !loading && (
       <div className="page-container">
         <Filter className="filters" />
-        <ProductListingSection className="products-container" />
+        <ProductListingSection
+          className="products-container"
+          isLoading={loading}
+        />
       </div>
     )
   );
