@@ -1,0 +1,13 @@
+.navLink-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.navLink-container .drawer-nav {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
