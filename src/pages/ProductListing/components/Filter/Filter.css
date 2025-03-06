@@ -91,13 +91,24 @@
 /* --------filter-body--------- */
 
 .filter-types-container {
-  display: none;
+  /* display: none; */
+
+  visibility: collapse;
+  opacity: 0;
+  height: 0;
+  transition: 0.3s;
+  overflow: hidden;
 }
 
 .filter-types-container-mobile {
   display: flex;
   flex-flow: column nowrap;
   margin-top: 1em;
+
+  visibility: visible;
+  opacity: 1;
+  height: fit-content;
+  transition: 0.5s;
 }
 
 .filter-types-container-mobile > * {
